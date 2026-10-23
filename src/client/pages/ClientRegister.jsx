@@ -4,6 +4,7 @@ import { useClientAuth } from "../context/ClientAuthContext";
 import { useNavigate, Link } from "react-router-dom";
 import { toast } from "react-toastify";
 import { FiArrowLeft, FiEye, FiEyeOff } from "react-icons/fi";
+import { db } from "../../../firebase"; // Ensure path matches your project structure
 import { doc, serverTimestamp, setDoc } from "firebase/firestore";
 
 export default function ClientRegister() {
@@ -12,7 +13,7 @@ export default function ClientRegister() {
   const [confirmPassword, setConfirmPassword] = useState("");
   const [showPassword, setShowPassword] = useState(false);
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
-  const [loading, setLoading] = useState(false); // 1. Loading state
+  const [loading, setLoading] = useState(false);
 
   const { signup } = useClientAuth();
   const navigate = useNavigate();
@@ -24,19 +25,23 @@ export default function ClientRegister() {
       return;
     }
 
-    setLoading(true); // 2. Turn loading on
+    setLoading(true);
     try {
-      await signup(email, password);
+      // 1. Await the signup and capture the result object
+      const result = await signup(email, password);
+
+      // 2. Save user email into Firestore so the Admin Users tab can see it
       await setDoc(doc(db, "users", result.user.uid), {
         email: email,
         createdAt: serverTimestamp(),
       });
+
       toast.success("Account created successfully!");
       navigate("/");
     } catch (err) {
       toast.error(err.message);
     } finally {
-      setLoading(false); // 3. Turn loading off
+      setLoading(false);
     }
   };
 
@@ -117,7 +122,6 @@ export default function ClientRegister() {
               </div>
             </div>
 
-            {/* 4. Button with spinner and disabled states */}
             <button
               type="submit"
               disabled={loading}

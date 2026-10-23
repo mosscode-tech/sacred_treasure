@@ -70,7 +70,7 @@ export default function CartDrawer({ isOpen, onClose, cart, totalItems, totalPri
             <div className="border-t border-gray-100 px-6 py-4 bg-gray-50">
               <div className="flex justify-between items-center mb-4">
                 <span className="font-medium text-gray-600">Total:</span>
-                <span className="text-xl font-bold text-gray-900">${totalPrice.toFixed(2)}</span>
+                <span className="text-xl font-bold text-gray-900">Ksh.{totalPrice.toFixed(2)}</span>
               </div>
               <button 
                 onClick={() => {
