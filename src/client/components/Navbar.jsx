@@ -3,6 +3,7 @@ import { useState } from 'react';
 import { FiShoppingCart, FiSearch, FiMenu, FiX, FiUser, FiPackage, FiHeart } from 'react-icons/fi';
 import { Link } from 'react-router-dom';
 import { useClientAuth } from '../context/ClientAuthContext';
+import logoSvg from '../../assets/favicon.svg';
 
 export default function Navbar({ 
   searchQuery, 
@@ -21,7 +22,8 @@ export default function Navbar({
       <div className="max-w-7xl mx-auto px-4 sm:px-6 py-4 flex justify-between items-center gap-4">
         {/* Brand Title */}
         <Link to="/" className="text-xl sm:text-2xl font-bold text-gray-800 tracking-wide flex items-center gap-2">
-          ✨ <span className="truncate">Sacred Treasure</span>
+        <img src={logoSvg} alt="Sacred Treasure Logo" className="w-8 h-8 object-contain shrink-0" />
+           <span className="truncate">Sacred Treasure</span>
         </Link>
         
         {/* Desktop Search Bar */}

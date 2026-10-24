@@ -37,7 +37,7 @@ export default function ProductCard({ product, onSelect, onAddToCart, isWishlist
             {product.category || 'General'}
           </span>
           <h3 className="font-bold text-gray-800 text-base sm:text-lg mt-2 line-clamp-1">{product.title}</h3>
-          <p className="text-lg sm:text-xl font-bold text-gray-900 mt-1">Ksh.{product.price}</p>
+          <p className="text-lg sm:text-xl font-bold text-gray-900 mt-1">Ksh. {product.price.toLocaleString()}</p>
           
           <div className="text-xs sm:text-sm text-gray-500 mt-2 line-clamp-2 overflow-hidden prose">
             <ReactMarkdown>{product.description}</ReactMarkdown>

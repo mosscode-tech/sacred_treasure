@@ -33,7 +33,7 @@ export default function ProductDetailsModal({ product, onClose, onAddToCart }) {
                 <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mt-2">{product.title}</h2>
               </div>
               <div className="text-right">
-                <p className="text-2xl sm:text-3xl font-extrabold text-gray-900">Ksh{product.price}</p>
+                <p className="text-2xl sm:text-3xl font-extrabold text-gray-900">Ksh. {product.price.toLocaleString()}</p>
                 <p className="text-xs text-gray-500 mt-1">Stock available: {product.stock ?? 'N/A'}</p>
               </div>
             </div>

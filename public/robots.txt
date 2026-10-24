@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://mosscode-tech.github.io/sacred_treasure/sitemap.xml

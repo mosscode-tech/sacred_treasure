@@ -149,7 +149,7 @@ const ProductForm = ({ initialData, existingProducts, onSubmit, onCancel, loadin
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
         <div>
-          <label className="block text-sm font-medium text-gray-600 mb-1">Price ($)</label>
+          <label className="block text-sm font-medium text-gray-600 mb-1">Price (Ksh.)</label>
           <input 
             type="number" 
             placeholder="0.00" 

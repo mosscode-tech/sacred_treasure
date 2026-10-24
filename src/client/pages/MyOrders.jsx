@@ -105,14 +105,14 @@ export default function MyOrders() {
                           <p className="text-xs text-gray-500">Qty: {item.quantity}</p>
                         </div>
                       </div>
-                      <span className="font-bold text-gray-900">${(item.price * item.quantity).toFixed(2)}</span>
+                      <span className="font-bold text-gray-900">Ksh. {(item.price * item.quantity).toLocaleString()}</span>
                     </div>
                   ))}
                 </div>
 
                 <div className="pt-4 border-t border-gray-100 flex justify-between items-center">
                   <span className="text-sm font-medium text-gray-600">Total Paid</span>
-                  <span className="text-lg font-extrabold text-gray-900">${order.totalAmount.toFixed(2)}</span>
+                  <span className="text-lg font-extrabold text-gray-900">Ksh. {order.totalAmount.toLocaleString()}</span>
                 </div>
               </div>
             ))}

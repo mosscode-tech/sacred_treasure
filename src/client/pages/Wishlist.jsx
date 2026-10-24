@@ -53,7 +53,7 @@ export default function Wishlist() {
                       {product.category || 'General'}
                     </span>
                     <h3 className="font-bold text-gray-800 text-base mt-2 line-clamp-1">{product.title}</h3>
-                    <p className="text-lg font-bold text-gray-900 mt-1">${product.price}</p>
+                    <p className="text-lg font-bold text-gray-900 mt-1">Ksh. {product.price.toLocaleString()}</p>
                   </div>
                 </div>
 

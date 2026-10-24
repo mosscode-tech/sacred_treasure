@@ -36,7 +36,7 @@ export default function CartDrawer({ isOpen, onClose, cart, totalItems, totalPri
                   
                   <div className="flex-1 min-w-0">
                     <h4 className="font-semibold text-gray-800 text-sm truncate">{item.title}</h4>
-                    <p className="text-sm font-bold text-gray-900">${item.price}</p>
+                    <p className="text-sm font-bold text-gray-900">Ksh. {item.price.toLocaleString()}</p>
                     
                     <div className="flex items-center gap-2 mt-2">
                       <button 
@@ -70,7 +70,7 @@ export default function CartDrawer({ isOpen, onClose, cart, totalItems, totalPri
             <div className="border-t border-gray-100 px-6 py-4 bg-gray-50">
               <div className="flex justify-between items-center mb-4">
                 <span className="font-medium text-gray-600">Total:</span>
-                <span className="text-xl font-bold text-gray-900">Ksh.{totalPrice.toFixed(2)}</span>
+                <span className="text-xl font-bold text-gray-900">Ksh. {totalPrice.toLocaleString()}</span>
               </div>
               <button 
                 onClick={() => {

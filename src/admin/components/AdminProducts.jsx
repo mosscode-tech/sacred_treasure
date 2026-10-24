@@ -110,7 +110,7 @@ export default function AdminProducts() {
                     <span className="px-2 py-0.5 text-xs bg-blue-100 text-blue-700 rounded-full shrink-0">{p.category}</span>
                   </div>
                   <p className="text-sm text-gray-600 line-clamp-1 font-mono">{p.description}</p>
-                  <p className="text-sm font-medium text-gray-900 mt-1">Ksh.{p.price} <span className="text-gray-400 font-normal">| Stock: {p.stock}</span></p>
+                  <p className="text-sm font-medium text-gray-900 mt-1">Ksh. {p.price.toLocaleString()} <span className="text-gray-400 font-normal">| Stock: {p.stock}</span></p>
                 </div>
               </div>
               <div className="flex gap-2 w-full md:w-auto justify-end shrink-0">
