@@ -23,7 +23,7 @@ const AdminDashboard = lazy(() => import('./admin/pages/AdminDashboard'));
 
 export default function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename={import.meta.env.BASE_URL}>
       <ClientAuthProvider>
         <WishlistProvider>
           <CartProvider>
