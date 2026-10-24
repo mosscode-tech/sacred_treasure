@@ -4,7 +4,7 @@ import { Navigate } from 'react-router-dom';
 import { auth } from '../../../firebase';
 import { onAuthStateChanged } from 'firebase/auth';
 
-const ADMIN_EMAILS = ['mosscode101@gmail.com', 'your-actual-admin-email@gmail.com'];
+const ADMIN_EMAILS = ['mosscode101@gmail.com', 'josephinenungarivc@gmail.com'];
 
 export default function ProtectedRoute({ children }) {
   const [user, setUser] = useState(null);
