@@ -27,7 +27,7 @@ export default function ProtectedRoute({ children }) {
   }
 
   if (!user || !ADMIN_EMAILS.includes(user.email)) {
-    return <Navigate to="/admin/login" replace />;
+    return <Navigate to="/admin2026/login" replace />;
   }
 
   return children;

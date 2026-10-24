@@ -79,7 +79,7 @@ export default function AdminDashboard() {
   const handleLogout = () => {
     localStorage.removeItem('isAdminAuthenticated');
     toast.info("Logged out from admin panel");
-    navigate('/admin/login');
+    navigate('/admin2026/login');
   };
 
   if (loading) {

@@ -16,7 +16,7 @@ const AdminLogin = () => {
 
     try {
       await signInWithEmailAndPassword(auth, email, password);
-      navigate('/admin');
+      navigate('/admin2026');
     } catch (err) {
       setError('Invalid email or password. Please try again.');
     }
