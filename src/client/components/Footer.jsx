@@ -1,6 +1,7 @@
 // src/client/components/Footer.jsx
 import { Link } from 'react-router-dom';
 import { FiPhone, FiMapPin, FiShield, FiHeart } from 'react-icons/fi';
+import logoSvg from '../../assets/favicon.svg';
 
 export default function Footer() {
   return (
@@ -10,7 +11,8 @@ export default function Footer() {
         {/* Brand & Mission */}
         <div>
           <h3 className="text-lg font-extrabold text-gray-900 tracking-wide flex items-center gap-2">
-            ✨ Sacred Treasure
+            <img src={logoSvg} alt="Sacred Treasure Logo" className="w-8 h-8 object-contain shrink-0" />
+           Sacred Treasure
           </h3>
           <p className="text-gray-500 text-sm mt-3 leading-relaxed">
             Discover rare artifacts, timeless pieces, and exclusive spiritual collections curated to enrich your faith and space.
@@ -34,7 +36,7 @@ export default function Footer() {
             <div className="flex items-start gap-2.5">
               <FiPhone className="text-blue-600 mt-1 shrink-0" />
               <div>
-                <p>+254 22824619</p>
+                <p>+254 722824619</p>
                 <p>+254 140333434</p>
               </div>
             </div>
