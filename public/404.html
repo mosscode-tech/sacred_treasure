@@ -5,7 +5,7 @@
     <title>Sacred Treasure</title>
     <script type="text/javascript">
       // Redirects 404 traffic on sub-routes back to index.html with the route intact
-      var pathSegmentsToKeep = 1; // 1 for repo subpath (/sacred_treasure/)
+      var pathSegmentsToKeep = 0; // Custom domain is hosted at the root path
       var l = window.location;
       l.replace(
         l.protocol + '//' + l.hostname + (l.port ? ':' + l.port : '') +
